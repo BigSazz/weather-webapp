@@ -22,7 +22,7 @@ type Props = {
 async function WeatherPage({ params: { city, lat, lng } }: Props) {
 	const client = getClient();
 
-	const { data } = await client.query({
+	const { data, error } = await client.query({
 		query: fetchWeatherQuery,
 		variables: {
 			current_weather: 'true',
@@ -33,6 +33,8 @@ async function WeatherPage({ params: { city, lat, lng } }: Props) {
 	});
 
 	const results: Root = data.myQuery;
+
+	console.log('error', error);
 
 	const dataToAI = cleanData(results, city);
 
