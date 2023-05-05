@@ -68,10 +68,10 @@ async function WeatherPage({ params: { city, lat, lng } }: Props) {
 						</p>
 					</div>
 
-					<div className='m-2 mb-10 shadow-md'>
-						{/* <CalloutCard message={content} /> */}
-						<CalloutCard message='The weather for the week!' />
-					</div>
+					{/* <div className='m-2 mb-10 shadow-md'> */}
+					{/* <CalloutCard message={content} /> */}
+					{/* <CalloutCard message='The weather for the week!' /> */}
+					{/* </div> */}
 
 					<div className='grid grid-cols-1 xl:grid-cols-2 gap-5 m-2'>
 						<StatCard
